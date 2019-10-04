@@ -8,6 +8,10 @@
 		<result property="author" column="author"/>
 		<result property="price" column="price"/>
 		<result property="flavor" column="flavor"/>
+		<association property="type" javaType="Type">
+			<id property="id" column="id"/>
+			<result property="name" column="name"/>
+		</association>
 	</resultMap>
 
     <select id="findAll" resultMap="menuMap">
